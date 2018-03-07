@@ -38,4 +38,4 @@ act = do
 
 ## Restriction
 
-This library is only work on `hpec`.
+This library is only work on [hspec](http://hspec.github.io/).
