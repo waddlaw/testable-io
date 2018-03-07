@@ -10,10 +10,10 @@ import           System.IO         (Handle, SeekMode (AbsoluteSeek), hClose,
                                     stdin, stdout)
 
 evalFakeIO :: IO a -> String -> IO a
-evalFakeIO act inp = runFakeIO act inp >>= return . fst
+evalFakeIO act inp = fst <$> runFakeIO act inp
 
 execFakeIO :: IO a -> String -> IO String
-execFakeIO act inp = runFakeIO act inp >>= return . snd
+execFakeIO act inp = snd <$> runFakeIO act inp
 
 -- | Perform an action with explicit input\/output connected to
 -- @`stdin`@\/@`stdout`@
