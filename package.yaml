@@ -1,0 +1,40 @@
+name:                testable-io
+version:            01.1.0.0
+github:              "waddlaw/testable-io"
+license:             BSD3
+author:              "shinya yamaguchi"
+maintainer:          "ingroze@gmail.com"
+copyright:           "Copyright (c) 2018 Shinya Yamaguchi"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Your Projects Category
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on Github at <https://github.com/waddlaw/testable-io#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- directory
+- deepseq
+
+library:
+  source-dirs: src
+
+tests:
+  testable-io-test:
+    main: Main.hs
+    source-dirs: test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - testable-io
+    - hspec
