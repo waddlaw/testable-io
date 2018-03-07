@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/waddlaw/testable-io.svg?branch=master)](https://travis-ci.org/waddlaw/testable-io)
+
 # testable-io
 
 Inspired: [imperative-edsl](https://hackage.haskell.org/package/imperative-edsl)
