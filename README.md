@@ -33,3 +33,7 @@ act = do
   print (x, y)
   return (x, y)
 ```
+
+## Restriction
+
+This library is only work on `hpec`.
